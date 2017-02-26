@@ -1,0 +1,529 @@
+.top-bar{
+	width: $p-wid;
+	@extend %h-center;
+	height: 58px;
+	line-height: 58px;
+	color: $p-col;
+	strong{
+		font-size: $font-18;
+		color: $main-col;
+	}
+}
+.cv-wrap{
+	width: $p-wid;
+	@extend %clearfix;
+	@extend %h-center;
+	.cv-side{
+		width: 240px;
+		@extend %pull-left;
+		.cv-side-t,.cv-side-c,.cv-side-b{
+			@extend %shadow1;
+			padding: 25px 30px;
+			margin-bottom: 20px;
+			background-color: $whi-col;
+			@extend %border-radius4;
+		}
+		.side-title{
+			height: 28px;
+			position: relative;
+			overflow: hidden;
+			h3{
+				height: 18px;
+				line-height: 18px;
+				#line-height: 22px;
+				margin-top: 5px;
+				font-size: $font-18;
+				padding-left: 10px;
+				border-left: 4px solid $bor-col;
+				color: $main-col;
+			}
+			.btn-change{
+				position: absolute;
+				top: 0;
+				right: 0;
+				@include size(81px,25px);
+				line-height: 25px;
+				text-align: center;
+				border: 1px solid $ligh-col;
+				@include border-radius(13px);
+				color: $ligh-col;
+				font-size: $font-14;
+			}
+			.btn-change:hover{
+				border: 1px solid $ligh-col-hov;
+			}
+		}
+		.cv-side-c,.cv-side-b{
+			padding-left: 0;
+			padding-right: 0;
+			.side-title{
+				padding: 0 30px;
+			}
+		}
+	}
+	.cv-side-t{
+		.pos{
+			margin-top: 30px;
+			font-size: $font-14;
+			line-height: 24px;
+		}
+		.pos-tit{
+			color: $gray-col;
+		}
+		.pos-con{
+			color: $main-col;
+		}
+		.skill{
+			margin-top: 15px;
+		}
+		.skill-con{
+			@extend %clearfix;
+			.skill-wrap{
+				@extend %clearfix;
+			}
+			.skill-tag{
+				@extend %pull-left;
+				height: 25px;
+				line-height: 25px;
+				padding: 0 24px 0 8px;
+				border: 1px solid $line-col;
+				@extend %border-radius4;
+				margin-top: 8px;
+				margin-right: 8px;
+				white-space: nowrap;
+				position: relative;
+			}
+			.skill-tag i{
+				position: absolute;
+				top: 9px;
+				right: 8px;
+				cursor: pointer;
+				@include cvlist-sprite(del);
+			}
+			.skill-tag i:hover{
+				@include cvlist-sprite(del-hov);
+			}
+			.add-wrap{
+				@include size(179px,27px);
+				position: relative;
+				margin-top: 8px;
+				overflow: hidden;
+			}
+			.add-con{
+				@include border-top-right-radius(4px);
+				@include border-bottom-right-radius(4px);
+				@extend %pull-left;
+				@include size(150px,25px);
+				border: 1px solid $tip-col;
+				position: absolute;
+				top: 0;
+				left: -160px;
+				z-index: 88;
+			}
+			.add-con input{
+				height: 25px;
+				width: 138px;
+				padding: 0 6px;
+			}
+			.add-btn{
+				@include border-top-left-radius(4px);
+				@include border-bottom-left-radius(4px);
+				border: 1px solid $line-col;
+				@extend %pull-left;
+				@include size(25px);
+				position: relative;
+				z-index: 999;
+				background-color: $whi-col;
+			}
+			.add-btn i{
+				position: absolute;
+				top: 8px;
+				left: 8px;
+				@include cvlist-sprite(add);
+			}
+			.add-btn:hover{
+				border: 1px solid $tip-col;
+			}
+			.add-btn:hover i{
+				@include cvlist-sprite(add-hov);
+			}
+			.add-rad{
+				@include border-top-right-radius(4px);
+				@include border-bottom-right-radius(4px);
+			}
+		}
+	}
+	.cv-side-c,.cv-side-b{
+		font-size: $font-14;
+		color: $gray-col;
+		.des-com{
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding: 0 30px;
+		}
+// ............
+		.des-c-b .des-li{
+			height: 26px;
+			margin-top: 20px;
+		}
+		.des-c-b li em,.des-c-b li div{
+			@extend %pull-left;
+		}
+		.des-c-b li em{
+			line-height: 24px;
+		}
+		.divi{
+			margin: 0 5px;
+		}
+		.des-c-b li input{
+			width: 46px;
+			height: 100%;
+		}
+		.inp-size{
+			@include size(46px,24px);
+			border: 1px solid $tip-col;
+			@include border-radius(2px);
+			position: relative;
+			::-webkit-input-placeholder{
+				color: $main-col;
+			}
+			input{
+				text-align: center;
+			}
+		}
+		.inp-size.active{
+			border: 1px solid $ligh-col;
+			.com-down{
+				display: block;
+			}
+		}
+		.oth-indi{
+			height: 45px;
+			position: relative;
+			padding: 0 30px;
+			&:after{
+				content: "";
+				position: absolute;
+				@include cvlist-sprite(arrow-r);
+				top: 17px;
+				right: 30px;
+			}
+			// &:hover .pop-fra{
+			// 	display: block;
+			// }
+		}
+		.oth-con{
+			width: 180px;
+			@extend %ellipsis;
+			line-height: 45px;
+		}
+		.pop-fra{
+			top: -45px;
+			left: 254px;
+			//display: none;
+		}
+		.show-sel .pop-fra{
+			display: block;
+		}
+		.only-re{
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: $main-col;
+			border-top: 1px solid $line-col;
+		}
+		.only-re i{
+			vertical-align: text-bottom;
+			margin-right: 6px;
+		}
+	}
+	.cv-side-b{
+		.sel-btn {
+			position: absolute;
+			top: 11px;
+			right: 30px;
+			width: 10px;
+			height: 6px;
+			//background: url(/slice/speicon/bg-sprite.png) no-repeat 0 -33px;
+			background: url(../images/speicon/bg-sprite.png) no-repeat 0 -33px;
+	    	-webkit-transition: all 0.3s ease-in 0s;
+	    	transition: all 0.3s ease-in 0s;
+		}
+		.sel-pull {
+			background: url(../images/speicon/bg-sprite.png) no-repeat 0 -39px;
+		}
+		.more-filter{
+			display: none;
+		}
+	}
+	.maj-list{
+		width: 848px;
+		padding: 0 30px 30px;
+		tr{
+			border-bottom: 1px solid $line-low;	
+		}
+		tr:last-of-type{
+			border-bottom: none;
+		}
+		td{
+			padding-bottom: 12px;	
+		}
+		.all-til{
+			width: 190px;
+			color: $main-col;
+		}
+		.com-check{
+			vertical-align: text-top;
+			margin-right: 8px;
+		}
+		span{
+			margin-top: 10px;
+		}
+		.all-til{
+			vertical-align: top;
+		}
+		.all-til span{
+			width: 195px;
+			@extend %pull-left;
+			@extend %ellipsis;
+		}
+		.all-det span{
+			width: 138px;
+			margin-right: 10px;
+			@extend %pull-left;
+			@extend %ellipsis;
+		}
+	}
+	
+	.cv-con{
+		@extend %pull-right;
+		padding-bottom: 40px;
+		width: 895px;
+		.paging{
+			padding-top: 10px;
+		}
+	}
+	.cv-filter{
+		height: 75px;
+		background-color: $whi-col;
+		@extend %shadow2;
+		@extend %border-radius4;
+		li{
+			@extend %pull-left;
+			position: relative;
+			&:after{
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 20px;
+				right: 0;
+				top: 28px;
+				background-color: $line-col;
+			}
+		}
+		li:last-of-type{
+			&:after{
+				background-color: $whi-col;
+			}
+		}
+		.active{
+			height: 74px;
+			border-bottom: 1px solid $ligh-col;
+			a{
+				color: $ligh-col;
+			}
+		}
+		a{
+			line-height: 75px;
+			@extend %pull-left;
+			padding: 0 20px;
+			font-size: $font-16;
+			color: $main-col;
+			&:hover{
+				color: $ligh-col;
+			}
+		}
+		li:first-of-type a{
+			padding-left: 30px;
+		}
+	}
+	.rank-term{
+		height: 50px;
+		line-height: 50px;
+		li{
+			@extend %pull-left;
+		}
+		a{
+			@extend %pull-left;
+			padding: 0 15px;
+			font-size: $font-14;
+			color: $gray-col;
+		}
+		li:first-of-type a{
+			padding-left: 30px;
+		}
+		i{
+			@extend %inline-block;
+			margin-left: 9px;
+    			width: 6px;
+    			height: 11px;
+	    		background: url(../images/speicon/bg-sprite.png) no-repeat -2px -22px;
+	    		-webkit-transition: all 0.3s ease-in 0s;
+	    		transition: all 0.3s ease-in 0s;
+		}
+		.active-dow a{
+			color: $ligh-col;
+			i{
+	    			background: url(../images/speicon/bg-sprite.png) no-repeat -2px -11px;
+			}
+		}
+		.active-up a{
+			i{
+    				background: url(../images/cvlist/bg-sprite.png) no-repeat -2px 0;
+			}
+		}
+	}
+}
+.cvlist{
+	@extend %shadow2;
+	@extend %border-radius4;
+	background-color: $whi-col;
+	margin-bottom: 20px;
+	.cv-title{
+		height: 107px;
+		border-bottom: 1px solid $bg-col;
+	}
+	.brand{
+		margin: 15px 15px 0 20px;
+	}
+	.cv-infor{
+		padding-top: 30px;
+		position: relative;
+	}
+	.cv-infor-til a{
+		font-size: $font-22;
+		color: $main-col;
+	}
+	.cv-infor-con{
+		font-size: $font-14;
+		margin-top: 15px;
+		color: $gray-col;
+	}
+	.cv-infor-con em{
+		margin-right: 15px;
+	}
+	.cv-bar{
+		position: absolute;
+		top: 0;
+		right: 30px;
+		width: 54px;
+		height: 80px;
+		padding-top: 24px;
+		background-color: $yellow;
+		text-align: center;
+		color: $whi-col;
+		&:after{
+			content: "";
+			position: absolute;
+			border-left: 27px solid transparent;
+			border-right: 27px solid transparent;
+			border-bottom: 10px solid $whi-col;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	.suit-mid{
+		@include opacity(.7);
+	}
+	.suit-low{
+		@include opacity(.5);
+	}
+	.cv-details{
+		padding: 20px 30px;
+	}
+	.his-list{
+		//border-left: 1px solid $line-low;
+		padding-left: 16px;
+		margin-left: 72px;
+		position: relative;
+	}
+	.line{
+		position: absolute;
+		width: 1px;
+		background-color: $line-low;
+		top: 8px;
+		bottom: 8px;
+		left: 0;
+	}
+	.his-title{
+		color: $main-col;
+		font-size: $font-14;
+		height: 18px;
+		line-height: 18px;
+		position: relative;
+		margin-bottom: 10px;
+		.dot{
+			position: absolute;
+			@include size(7px);
+			@extend %border-half;
+			background-color: $tip-col;
+			top: 4px;
+			left: -19px;
+			z-index: 999;
+		}
+		em{
+			color: $gray-col;
+		}
+	}
+	.his-date{
+		position: absolute;
+		top: 0;
+		left: -90px;
+	}
+	.his-details{
+		color: $gray-col;
+		line-height: 24px;
+		padding-bottom: 24px;
+	}
+	.cv-ope-wrap{
+		height: 20px;
+	}
+	.cv-ope{
+		@extend %pull-right;
+		li{
+			margin-left: 32px;
+			font-size: 14px;
+			color: $gray-col;
+		}
+		a{
+			color: $gray-col;
+		}
+		i{
+			margin-top: 4px;
+			margin-right: 6px;
+		}
+		.op{
+			display: none;
+		}
+	}
+	.cv-ope li,.cv-ope a,.cv-ope i{
+		@extend %pull-left;
+	}
+	.cv-ope .collect{
+		margin-top: 3px;
+	}
+
+	.forward{
+		@include cvlist-sprite(emai);
+	}
+	.export{
+		@include cvlist-sprite(out);
+	}
+	.collect{
+		@include cvlist-sprite(col);
+	}
+	.hav-collect{
+		@include cvlist-sprite(col-hav);
+	}
+}
+

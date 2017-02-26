@@ -1,0 +1,418 @@
+.cv-dets{
+	.top-bar{
+		font-size: $font-16;
+		color: $gray-col;
+		.wid-l{
+			height: 58px;
+			position: relative;
+		}
+	}
+	.resume-infor{
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: $font-12;
+		@extend %pull-right;
+		span{
+			margin-left: 22px;
+		}
+	}
+	.about-res{
+		@extend %clearfix;
+		width: $p-wid;
+		@extend %h-center;
+	}
+	.about-con{
+		float: left;
+		width: $l-wid;
+	}
+	.per{
+		background-color: $whi-col;
+		@extend %shadow2;
+		@extend %border-radius4;
+		.per-top{
+			height: 112px;
+			border-bottom: 1px solid $line-col;
+			@extend %shadow2;
+			padding: 30px 30px 15px;
+			position: relative;
+			.com-btn{
+				position: absolute;
+				right: 30px;
+				bottom: 37px;
+			}
+		}
+		.per-head{
+			@extend %pull-left;
+			@include size(102px);
+			border: 4px solid $bg-col;
+			@extend %border-half;
+			overflow: hidden;
+		}
+		.per-details{
+			padding-left: 142px;
+			padding-top: 12px;
+			font-size: $font-14;
+			color: $gray-col;
+		}
+		.per-de-t{
+			height: 30px;
+			line-height: 30px;
+			.per-na{
+				font-size: $font-30;
+				color: $main-col;
+				margin-right: 28px;
+			}
+			em{
+				margin-right: 8px;
+			}
+		}
+		.per-de-c{
+			margin-top: 5px;
+			em{
+				margin-right: 20px;
+			}
+		}
+		.per-de-b em{
+			margin-right: 20px;
+		}
+		.per-cen{
+			border-bottom: 1px solid $line-low;
+			height: 138px;
+		}
+		.per-c-l{
+			@extend %pull-left;
+			@include size(400px,118px);
+			padding-left: 80px;
+			padding-top: 20px;
+			border-right: 1px solid $line-low;
+		}
+		.compare{
+			@extend %pull-left;
+			margin-top: 15px;
+			padding-left: 28px;
+			width: 270px;
+		}
+		.comp-line{
+			height: 26px;
+			line-height: 22px;
+		}
+		.comp-line .yel{
+			margin: 0 3px;
+		}
+		.comp-line .yel em{
+			font-size: $font-16;
+		}
+		.comp-txt{
+			@extend %pull-left;
+			color: $main-col;
+		}
+		.prog{
+			@extend %pull-left;
+			background-color: $line-col;;
+			margin-top: 8px;
+			@include size(54px,6px);
+			margin-left: 16px;
+		}
+		.prog-num{
+			@extend %pull-left;
+			height: 6px;
+			background-color: $yellowish;
+			width: 50%;
+		}
+		.per-c-r{
+			@extend %pull-left;
+			height: 118px;
+			padding-top: 20px;
+			padding-left: 80px;
+			.compare{
+				width: 200px;
+			}
+		}
+		.per-bot{
+			height: 40px;
+			line-height: 40px;
+			color: $red;
+			padding-left: 80px;
+		}
+		.warning{
+			@extend %inline-block;
+			@include cvlist-sprite(warn);
+			vertical-align: text-bottom;
+			margin-right: 6px;
+		}
+	}
+	.work-xp{
+		background-color: $whi-col;
+		@extend %shadow2;
+		@extend %border-radius4;
+		margin-top: 22px;
+		padding-bottom: 50px;
+		.com-title{
+			height: 85px;
+			line-height: 85px;
+			position: relative;
+			padding-left: 50px;
+		}
+		.add-bot{
+			border-bottom: 1px solid $line-col;
+		}
+		.com-title span{
+			font-size: $font-30;
+		}
+		.com-btn{
+			position: absolute;
+			top: 25px;
+			right: 30px;
+		}
+		.line-bar{
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			@include size(4px,26px);
+			background-color: $bor-col;
+		}
+		.work-per{
+			border-left: 1px solid $line-col;
+			margin-left: 174px;
+			margin-top: 40px;
+		}
+		.mar-t0{
+			margin-top: 0;
+		}
+		.work-list{
+			padding: 40px 30px 40px 0;
+			border-bottom: 1px solid $line-col;
+			position: relative;
+			margin-left: 40px;
+		}
+		.time-line{
+			font-size: $font-14;
+			width: 120px;
+			position: absolute;
+			top: 44px;
+			left: -190px;
+			line-height: 24px;
+			text-align: right;
+		}
+		.wor-t{
+			padding-left: 66px;
+			height: 50px;                    //last add
+		}
+		.cir-icon{
+			position: absolute;
+			top: 50px;
+			left: -47px;
+			@include cvlist-sprite(cir);
+		}
+		.match-bar{
+			position: absolute;
+			top: 45px;
+			left: 0;
+			@include size(48px,38px);
+			line-height: 38px;
+			color: $whi-col;
+			text-align: center;
+			background-color: $yellow;
+			&:after{
+				content: "";
+				position: absolute;
+				border-left: 24px solid transparent;
+				border-right: 24px solid transparent;
+				border-bottom: 6px solid $whi-col;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		.no-match{
+			background-color: $tip-col;
+		}
+		.wor-l-t{
+			height: 26px;
+			font-size: $font-20;
+		}
+		.sim-wo-tip{
+			@extend %pull-right;
+			font-size: $font-12;
+		}
+		.sim-wo-tip em{
+			font-size: $font-16;
+		}
+		.wor-l-b{
+			margin-top: 5px;
+			font-size: $font-14;
+		}
+		.open-btn{
+			font-size: $font-12;
+			@extend %pull-right;
+			color: $gray-col;
+		}
+		.open-btn i{
+			@extend %inline-block;
+			@include cvlist-sprite(open);
+			margin-left: 5px;
+		}
+		.close-btn i{
+			@include cvlist-sprite(close);
+		}
+		.open-con{
+			line-height: 24px;
+		}
+		.open-con dl{
+			margin-top: 30px;
+			padding-left: 106px;
+			font-size: $font-14;
+		}
+		.open-con dd{
+			color: $gray-col;
+		}
+		.analysis{
+			margin-top: 25px;
+			height: 92px;
+			border: 1px solid $any-bor;
+			box-shadow: 0 3px 6px 0px rgba(0,0,0,.08);
+			@extend %border-radius4;
+			background-color: $bg-col;
+			padding: 20px;
+			line-height: 28px;
+			font-size: $font-14;
+			position: relative;
+			color: $gray-col;
+		}
+		.bot-txt{
+			position: absolute;
+			right: 20px;
+			bottom: 10px;
+			color: $tip-col;
+		}
+		.ana-yes{
+			@extend %pull-left;
+			width: 320px;
+		}
+		.ana-yes i,.ana-no i{
+			margin-right: 8px;
+			vertical-align: initial;
+		}
+		.ana-no{
+			@extend %pull-left;
+		}
+		.lack{
+			position: absolute;
+			top: 43px;
+			left: 0;
+			font-size: $font-20;
+			color: $tip-col;
+		}
+		.edu-list{
+			padding-top: 20px;
+			padding-bottom: 0;
+			font-size: $font-14;
+			border-bottom: none;
+			.wor-t{
+				height: 30px;
+				padding-left: 0;
+			}
+			.wor-t em{
+				margin-right: 16px;
+			}
+			.col-tag{
+				height: 25px;
+				min-width: 58px;
+				padding: 0 9px;
+				line-height: 25px;
+				text-align: center;
+				@extend %inline-block;
+				@include border-radius(2px);
+				border: 1px solid $line-col;
+			}
+			.time-line{
+				top: 22px;
+			}
+			.cir-icon{
+				top: 27px;
+			}
+		}
+		.first-list{
+			padding-top: 0;
+			.cir-icon{
+				@include cvlist-sprite(first-cir);
+				top: -10px;
+			}
+			.match-bar{
+				top: 5px;
+			}
+			.time-line{
+				top: 2px;
+			}
+		}
+		.last-list{
+			border-bottom: none;
+			padding-bottom: 0;
+			.cir-icon{
+				@include cvlist-sprite(last-cir);
+			}
+		}
+		.self-eva{
+			font-size: $font-14;
+			padding: 0 30px;
+		}
+		.self-ev-t{
+			margin-bottom: 20px;
+		}
+		.self-ev-b{
+			line-height: 26px;
+			dd{
+				color: $gray-col;
+			}
+		}
+	}
+	.sim-res{
+		float: right;
+		width: 240px;
+		@extend %shadow2;
+		@extend %border-radius4;
+		background-color: $whi-col;
+	}
+	.sim-r-title{
+		padding: 27px 30px 17px;
+		font-size: $font-18;
+		border-bottom: 1px solid $line-col;
+	}
+	.sim-r-con{
+		padding: 0 20px;
+	}
+	.sim-r-con a{
+		color: $main-col;
+	}
+	.sim-r-con li{
+		font-size: $font-14;
+		line-height: 30px;
+		padding: 10px 0 20px 60px;
+		border-bottom: 1px solid $line-low;
+		position: relative;
+	}
+	.sim-r-con li:last-of-type{
+		border-bottom: none;
+	}
+	.com-gra{
+		position: absolute;
+		top: 10px;
+		left: 0;
+	}
+	.sim-r-con .sim-cp{
+		line-height: 18px;
+		margin-top: 10px;
+	}
+	.sim-r-con .yel{
+		font-size: $font-12;
+	}
+	.sim-r-con .yel em{
+		font-size: $font-18;
+	}
+	.sim-tag{
+		font-size: $font-12;
+	}
+	.sim-tag em{
+		margin-right: 15px;
+	}
+}

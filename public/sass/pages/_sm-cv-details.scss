@@ -1,0 +1,98 @@
+.wid-l{
+	width: auto;
+}
+.sm-job-per{
+	background-color: $whi-col;
+	@extend %shadow2;
+	@extend %border-radius4;
+	@extend %clearfix;
+	padding-bottom: 50px;
+	position: relative;
+	div{
+		@extend %pull-left;
+	}
+	.sm-inf{
+		padding-left: 38px;
+		font-size: $font-14;
+		line-height: 26px;
+		h3{
+			margin-bottom: 10px;
+		}
+		div{
+			padding-right: 40px;
+			border-right: 1px solid $line-col;
+		}
+	}
+	.sm-l1{
+		padding-top: 50px;
+		width: 421px;
+		.sm-hd{
+			@extend %pull-left;
+			@include size(102px);
+			border: 4px solid $line-low;
+			@extend %border-half;
+			margin-left: 30px;
+			overflow: hidden;
+		}
+		.per{
+			color: $gray-col;
+			p{
+				width: 202px;
+				@extend %ellipsis;
+			}
+		}
+	}
+	.sm-l2{
+		p{
+			width: 198px;
+			@extend %ellipsis;
+		}
+	}
+	.sm-l2,.sm-l3{
+		padding-top: 50px;
+	}
+	.sm-l3{
+		@extend %pull-right;
+		padding-right: 30px;
+		width: 430px;
+		.sm-inf div{
+			border-right: none;
+		}
+		.sm-inf .com-btn{
+			margin-top: 35px;
+		}
+	}
+	.sm-l3-l{
+		margin-top: 90px;
+		margin-right: 58px;
+	}
+	.brand{
+		margin-right: 50px;
+	}
+	.sm-l3-r{
+		padding-top: 14px;
+		padding-left: 20px;
+		@extend %pull-right;
+		width: 215px;
+	}
+	.sm-data{
+		position: absolute;
+		font-size: $font-14;
+		top: 30px;
+		right: 30px;
+	}
+}
+.cv-dets{
+	.about-con{
+		width: auto;
+		float: none;
+	}
+	.per .per-details{
+		@extend %pull-left;
+		padding-left: 22px;
+	}
+}
+#footer{
+	background-color: #fff;
+	color: #000;
+}

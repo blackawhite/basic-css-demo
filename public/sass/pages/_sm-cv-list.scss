@@ -1,0 +1,61 @@
+
+.rank-term{
+	background-color: $whi-col;
+	margin-bottom: 20px;
+	@extend %shadow2;
+}
+.sim-cv-side-t{      //simple version
+	@extend %shadow1;
+	padding: 25px 0;
+	margin-bottom: 20px;
+	background-color: $whi-col;
+	@extend %border-radius4;
+	.side-title{
+		padding: 0 30px;
+	}
+	.padd-lr7{
+		padding: 0 7px;
+	}
+	.jo-na{
+		border: 1px solid $tip-col;
+		padding: 0 7px;
+		height: 25px;
+		margin-top: 20px;
+	}
+	.jo-na input{
+		height: 100%;
+		width: 100%;
+	}
+	textarea{
+		resize:none;
+		border: 0;
+		width: 100%;
+	}
+	.jo-txt{
+		border: 1px solid $tip-col;
+		margin-top: 14px;
+		padding: 6px;
+		textarea{
+			min-height: 220px;
+		}
+	}
+	.sech{
+		margin-left: 35px;
+		margin-top: 14px;
+	}
+}
+.cv-side-c{
+	.no-icon{
+		margin-top: 5px;
+		margin-left: 35px;
+	}
+}
+.open-btn{
+	cursor: pointer;
+}
+.brand{
+	font-size: $font-12;
+	em{
+		font-size: 11px;
+	}
+}

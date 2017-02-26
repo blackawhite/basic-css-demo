@@ -1,0 +1,49 @@
+.header{
+	height: 80px;
+	background-color: #fff;
+	@extend %shadow1;
+	font-size: $font-16;
+	.header-con{
+		width: $p-wid;
+		@extend %h-center;
+	}
+	.logo{
+		@extend %pull-left;
+		margin-top: 30px;
+    		@include cvlist-sprite(logo);
+	}
+	.nav{
+		@extend %pull-left;
+		line-height: 80px;
+	}
+	.nav li{
+		@extend %pull-left;
+		margin-left: 36px;
+	}
+	.nav .active a{
+		color: $ligh-col;
+	}
+	.nav a{
+		@extend %pull-left;
+		color: $main-col;
+		&:hover{
+			color: $ligh-col;
+		}
+	}
+	.user-infor{
+		line-height: 80px;
+		@extend %pull-right;
+	}
+	.user-name{
+		margin-right: 14px;
+	}
+	.user-head{
+		@extend %inline-block;
+		vertical-align: middle;//ie7
+		font-size: 0;
+		overflow: hidden;
+		border: 1px solid #edf1f5;
+		@include size(42px);
+		@include border-radius(5px);
+	}
+}

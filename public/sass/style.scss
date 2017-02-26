@@ -1,0 +1,18 @@
+@import "bases/config";
+@import "bases/reset";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+@import "mixins/often";
+@import "mixins/animate";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/pubmod";
+
+
+
+
+@import "pages/cv-list";
+@import "pages/cv-details";
+
+// @import "pages/sm-cv-list";
+// @import "pages/sm-cv-details";
